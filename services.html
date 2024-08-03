@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarrLuxe - Services</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/png" href="imgmath.png">
+</head>
+<body>
+    <header class="slide-in-left">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">CarrLuxe</div>
+          <nav>
+            <ul>
+              <li><a href="/index.html">Accueil</a></li>
+              <li><a href="/apropos.html">Collections</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  
+    <section class="services">
+      <div class="container">
+        <h1>Nos Services</h1>
+        <div class="service-grid">
+          <!-- Cartes de service existantes -->
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Conception personnalisée">
+            <div class="service-card-content">
+              <h3>Conception personnalisée</h3>
+              <p>Créez un design unique adapté à votre espace et à votre style personnel.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('conception')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Installation professionnelle">
+            <div class="service-card-content">
+              <h3>Installation professionnelle</h3>
+              <p>Une équipe d'experts pour une pose impeccable de votre carrelage.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('installation')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restauration et rénovation">
+            <div class="service-card-content">
+              <h3>Restauration et rénovation</h3>
+              <p>Donnez une nouvelle vie à vos anciens carrelages avec nos services de restauration.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('restauration')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Conseil et expertise">
+            <div class="service-card-content">
+              <h3>Conseil et expertise</h3>
+              <p>Bénéficiez de l'expertise de nos spécialistes pour faire les meilleurs choix.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('conseil')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://i.pinimg.com/736x/da/d3/17/dad31752258a7b5be1bfae5a46b9cfcf.jpg" alt="Entretien et nettoyage">
+            <div class="service-card-content">
+              <h3>Entretien et nettoyage</h3>
+              <p>Maintenez l'éclat de votre carrelage avec nos services d'entretien professionnels.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('entretien')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Fourniture de matériaux">
+            <div class="service-card-content">
+              <h3>Fourniture de matériaux</h3>
+              <p>Accédez à une large gamme de carrelages et matériaux de haute qualité pour vos projets.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('fourniture')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nouvelles cartes de service -->
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Design intérieur">
+            <div class="service-card-content">
+              <h3>Design intérieur</h3>
+              <p>Transformez votre espace avec notre service de design intérieur innovant et personnalisé.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('design')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Éclairage et ambiance">
+            <div class="service-card-content">
+              <h3>Éclairage et ambiance</h3>
+              <p>Créez l'ambiance parfaite avec notre expertise en éclairage et design d'espace.</p>
+              <div class="btn-container">
+                <button class="btn" onclick="openModal('eclairage')">En savoir plus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalContent"></p>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 CarrLuxe. Tous droits réservés.</p>
+      </div>
+    </footer>
+  
+    <script>
+      const modal = document.getElementById("serviceModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalContent = document.getElementById("modalContent");
+      const span = document.getElementsByClassName("close")[0];
+  
+      function openModal(service) {
+        modal.style.display = "block";
+        setTimeout(() => {
+          modal.classList.add("show");
+        }, 10);
+        
+        switch(service) {
+          case 'conception':
+            modalTitle.textContent = "Conception personnalisée";
+            modalContent.textContent = "Notre service de conception personnalisée vous permet de créer un espace unique qui reflète votre style et vos besoins. Nos designers travaillent étroitement avec vous pour comprendre vos préférences et vous proposer des solutions innovantes et élégantes pour votre carrelage.";
+            break;
+          case 'installation':
+            modalTitle.textContent = "Installation professionnelle";
+            modalContent.textContent = "Faites confiance à notre équipe d'experts pour une installation impeccable de votre carrelage. Nous utilisons des techniques de pointe et des outils professionnels pour garantir un résultat durable et esthétique, tout en respectant les normes les plus strictes de l'industrie.";
+            break;
+          case 'restauration':
+            modalTitle.textContent = "Restauration et rénovation";
+            modalContent.textContent = "Redonnez vie à vos anciens carrelages grâce à nos services de restauration et de rénovation. Que ce soit pour réparer des dommages ou pour moderniser l'apparence de votre carrelage, nos artisans qualifiés sauront redonner tout son éclat à votre espace.";
+            break;
+          case 'conseil':
+            modalTitle.textContent = "Conseil et expertise";
+            modalContent.textContent = "Profitez de l'expertise de nos spécialistes pour faire les meilleurs choix pour votre projet. Nous vous guidons dans la sélection des matériaux, des couleurs et des motifs les plus adaptés à votre espace et à vos besoins, en tenant compte de vos contraintes budgétaires et techniques.";
+            break;
+          case 'entretien':
+            modalTitle.textContent = "Entretien et nettoyage";
+            modalContent.textContent = "Préservez la beauté et la durabilité de votre carrelage avec nos services d'entretien professionnels. Nous utilisons des produits et des techniques spécialisés pour nettoyer en profondeur, protéger et restaurer l'éclat de vos carrelages, prolongeant ainsi leur durée de vie.";
+            break;
+          case 'fourniture':
+            modalTitle.textContent = "Fourniture de matériaux";
+            modalContent.textContent = "Accédez à une vaste sélection de carrelages et de matériaux de haute qualité pour tous vos projets. Notre gamme comprend des options pour tous les styles et budgets, des carreaux classiques aux designs les plus contemporains, en passant par des matériaux écologiques et innovants.";
+            break;
+          case 'design':
+            modalTitle.textContent = "Design intérieur";
+            modalContent.textContent = "Transformez votre espace avec notre service de design intérieur innovant et personnalisé. Nous vous aidons à créer une ambiance unique qui reflète vos goûts et vos besoins spécifiques, en utilisant des solutions créatives et adaptées.";
+            break;
+          case 'eclairage':
+            modalTitle.textContent = "Éclairage et ambiance";
+            modalContent.textContent = "Créez l'ambiance parfaite avec notre expertise en éclairage et design d'espace. Nous vous proposons des solutions d'éclairage qui complètent et mettent en valeur vos espaces, en ajoutant une touche chaleureuse et fonctionnelle à votre intérieur.";
+            break;
+        }
+      }
+  
+      function closeModal() {
+        modal.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 300);
+      }
+  
+      span.onclick = closeModal;
+  
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          closeModal();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const elementsToAnimate = document.querySelectorAll('header, .service-card');
+
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observerCallback = (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        elementsToAnimate.forEach(element => {
+          observer.observe(element);
+        });
+      });
+    </script>
+  </body>
+</html>

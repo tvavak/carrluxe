@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarrLuxe - Carrelage de Luxe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="slide-in-left">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">CarrLuxe</div>
+          <nav>
+            <ul>
+              <li><a href="/index.html">Accueil</a></li>
+              <li><a href="/apropos.html">Collections</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  
+    <section class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h1>CarrLuxe: L'Excellence du Carrelage</h1>
+            <p>Découvrez notre collection de carrelages de luxe pour sublimer votre intérieur</p>
+            <a href="/apropos.html" class="btn">Explorer nos Collections</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h1>Design Innovant</h1>
+            <p>Des motifs uniques pour un intérieur qui vous ressemble</p>
+            <a href="/apropos.html" class="btn">Voir nos Designs</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h1>Qualité Supérieure</h1>
+            <p>Des matériaux haut de gamme pour une durabilité exceptionnelle</p>
+            <a href="/services.html" class="btn">Nos Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <div class="carousel-indicator active"></div>
+        <div class="carousel-indicator"></div>
+        <div class="carousel-indicator"></div>
+      </div>
+      <div class="carousel-arrow carousel-arrow-left">&#10094;</div>
+      <div class="carousel-arrow carousel-arrow-right">&#10095;</div>
+    </section>
+  
+    <section class="features">
+      <div class="container">
+        <h2>Pourquoi Choisir CarrLuxe ?</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <i class="fas fa-gem"></i>
+            <h3>Qualité Supérieure</h3>
+            <p>Des matériaux sélectionnés avec soin pour une durabilité et une esthétique incomparables.</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Design Unique</h3>
+            <p>Des motifs exclusifs créés par nos designers pour un intérieur vraiment personnalisé.</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-tools"></i>
+            <h3>Installation Experte</h3>
+            <p>Une équipe de professionnels pour une pose parfaite et un résultat impeccable.</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-headset"></i>
+            <h3>Service Client Dédié</h3>
+            <p>Un accompagnement personnalisé tout au long de votre projet de rénovation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2023 CarrLuxe. Tous droits réservés.</p>
+          <div class="footer-contact">
+            <p>Des questions ? <a href="/contact">Contactez-nous</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script>
+      const carousel = document.querySelector('.carousel-inner');
+      const indicators = document.querySelectorAll('.carousel-indicator');
+      const leftArrow = document.querySelector('.carousel-arrow-left');
+      const rightArrow = document.querySelector('.carousel-arrow-right');
+      let currentIndex = 0;
+  
+      function showSlide(index) {
+        carousel.style.transform = `translateX(-${index * 33.333}%)`;
+        indicators.forEach((indicator, i) => {
+          indicator.classList.toggle('active', i === index);
+        });
+      }
+  
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % 3;
+        showSlide(currentIndex);
+      }
+  
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + 3) % 3;
+        showSlide(currentIndex);
+      }
+  
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          currentIndex = index;
+          showSlide(currentIndex);
+        });
+      });
+  
+      leftArrow.addEventListener('click', prevSlide);
+      rightArrow.addEventListener('click', nextSlide);
+  
+      setInterval(nextSlide, 5000);
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.carousel-inner');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const leftArrow = document.querySelector('.carousel-arrow-left');
+        const rightArrow = document.querySelector('.carousel-arrow-right');
+        let currentIndex = 0;
+        let autoSlideInterval;
+    
+        function showSlide(index) {
+          carousel.style.transform = `translateX(-${index * 33.333}%)`;
+          indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+          });
+        }
+    
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % 3;
+          showSlide(currentIndex);
+        }
+    
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + 3) % 3;
+          showSlide(currentIndex);
+        }
+    
+        function startAutoSlide() {
+          autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+    
+        function stopAutoSlide() {
+          clearInterval(autoSlideInterval);
+        }
+    
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => {
+            currentIndex = index;
+            showSlide(currentIndex);
+          });
+        });
+    
+        leftArrow.addEventListener('click', prevSlide);
+        rightArrow.addEventListener('click', nextSlide);
+    
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startAutoSlide();
+            } else {
+              stopAutoSlide();
+            }
+          });
+        }, { threshold: 0.5 });
+    
+        observer.observe(carousel);
+    
+        // Initialize the carousel
+        showSlide(currentIndex);
+      });
+    
+      document.addEventListener('DOMContentLoaded', () => {
+  const elementsToAnimate = document.querySelectorAll('header, .carousel-item, .features .feature');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  elementsToAnimate.forEach(element => {
+    observer.observe(element);
+  });
+});
+
+
+
+    </script>
+
+    
+  </body>
+  </html>
+

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarrLuxe - Carrelage de Luxe</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/png" href="imgmath.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      /* Styles pour l'animation glissante */
+      .slide-in {
+        opacity: 0;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+
+      .slide-in.visible {
+        opacity: 1;
+        transform: translateY(0); /* Retour à sa position initiale */
+      }
+
+      /* Styles pour la galerie */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* S'assure que l'image couvre tout le conteneur */
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .gallery-item-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-item-overlay {
+        transform: translateY(0);
+      }
+
+      /* Style du conteneur principal */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+</head>
+<body>
+    <header class="slide-in">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">CarrLuxe</div>
+          <nav>
+            <ul>
+              <li><a href="/index.html">Accueil</a></li>
+              <li><a href="/apropos.html">Collections</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  
+    <section class="gallery">
+      <div class="container">
+        <h1 class="slide-in">Galerie de Collections</h1>
+        <div class="gallery-grid">
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Élégance Intemporelle">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Élégance Intemporelle</h3>
+              <p class="gallery-item-description">Motifs classiques revisités</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nature Inspirée">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Nature Inspirée</h3>
+              <p class="gallery-item-description">Designs organiques et apaisants</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Modernité Urbaine">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Modernité Urbaine</h3>
+              <p class="gallery-item-description">Motifs géométriques audacieux</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxe Exotique">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Luxe Exotique</h3>
+              <p class="gallery-item-description">Matériaux rares et précieux</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Minimalisme Zen">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Minimalisme Zen</h3>
+              <p class="gallery-item-description">Designs épurés et harmonieux</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://atelierfollaco.com/wp-content/uploads/2018/08/carrelage-artisanal-marmorino-decor-fait-main-sgraffito.jpg" alt="Artisanat Traditionnel">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Artisanat Traditionnel</h3>
+              <p class="gallery-item-description">Carreaux faits main uniques</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Mosaïques Contemporaines">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Mosaïques Contemporaines</h3>
+              <p class="gallery-item-description">Compositions modernes et colorées</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Textures Naturelles">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Textures Naturelles</h3>
+              <p class="gallery-item-description">Inspirées des éléments naturels</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Art Déco Revisité">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Art Déco Revisité</h3>
+              <p class="gallery-item-description">Glamour des années folles</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Marbre Luxueux">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Marbre Luxueux</h3>
+              <p class="gallery-item-description">Élégance intemporelle du marbre</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Élégance Intemporelle">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Élégance Intemporelle</h3>
+              <p class="gallery-item-description">Motifs classiques revisités</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nature Inspirée">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Nature Inspirée</h3>
+              <p class="gallery-item-description">Designs organiques et apaisants</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Modernité Urbaine">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Modernité Urbaine</h3>
+              <p class="gallery-item-description">Motifs géométriques audacieux</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxe Exotique">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Luxe Exotique</h3>
+              <p class="gallery-item-description">Matériaux rares et précieux</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Minimalisme Zen">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Minimalisme Zen</h3>
+              <p class="gallery-item-description">Designs épurés et harmonieux</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://atelierfollaco.com/wp-content/uploads/2018/08/carrelage-artisanal-marmorino-decor-fait-main-sgraffito.jpg" alt="Artisanat Traditionnel">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Artisanat Traditionnel</h3>
+              <p class="gallery-item-description">Carreaux faits main uniques</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Mosaïques Contemporaines">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Mosaïques Contemporaines</h3>
+              <p class="gallery-item-description">Compositions modernes et colorées</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Textures Naturelles">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Textures Naturelles</h3>
+              <p class="gallery-item-description">Inspirées des éléments naturels</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Art Déco Revisité">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Art Déco Revisité</h3>
+              <p class="gallery-item-description">Glamour des années folles</p>
+            </div>
+          </div>
+          <div class="gallery-item slide-in">
+            <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Marbre Luxueux">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Marbre Luxueux</h3>
+              <p class="gallery-item-description">Élégance intemporelle du marbre</p>
+            </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Élégance Intemporelle">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Élégance Intemporelle</h3>
+            <p class="gallery-item-description">Motifs classiques revisités</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nature Inspirée">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Nature Inspirée</h3>
+            <p class="gallery-item-description">Designs organiques et apaisants</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Modernité Urbaine">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Modernité Urbaine</h3>
+            <p class="gallery-item-description">Motifs géométriques audacieux</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxe Exotique">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Luxe Exotique</h3>
+            <p class="gallery-item-description">Matériaux rares et précieux</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Minimalisme Zen">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Minimalisme Zen</h3>
+            <p class="gallery-item-description">Designs épurés et harmonieux</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://atelierfollaco.com/wp-content/uploads/2018/08/carrelage-artisanal-marmorino-decor-fait-main-sgraffito.jpg" alt="Artisanat Traditionnel">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Artisanat Traditionnel</h3>
+            <p class="gallery-item-description">Carreaux faits main uniques</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Mosaïques Contemporaines">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Mosaïques Contemporaines</h3>
+            <p class="gallery-item-description">Compositions modernes et colorées</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Textures Naturelles">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Textures Naturelles</h3>
+            <p class="gallery-item-description">Inspirées des éléments naturels</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Art Déco Revisité">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Art Déco Revisité</h3>
+            <p class="gallery-item-description">Glamour des années folles</p>
+          </div>
+        </div>
+        <div class="gallery-item slide-in">
+          <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Marbre Luxueux">
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Marbre Luxueux</h3>
+            <p class="gallery-item-description">Élégance intemporelle du marbre</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="slide-in">
+      <div class="container">
+        <p>&copy; 2023 CarrLuxe. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Configuration de l'Intersection Observer
+        const observerOptions = {
+          root: null, // Observe par rapport à la fenêtre du viewport
+          rootMargin: '0px',
+          threshold: 0.1 // Pourcentage de l'élément visible avant de déclencher l'animation
+        };
+
+        // Fonction de callback de l'observer
+        const observerCallback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible'); // Ajoute la classe 'visible' lorsque l'élément entre dans le viewport
+              observer.unobserve(entry.target); // Désactive l'observation une fois l'animation déclenchée
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // Cible tous les éléments avec la classe 'slide-in'
+        const targets = document.querySelectorAll('.slide-in');
+        targets.forEach(target => observer.observe(target));
+      });
+    </script>
+</body>
+</html>
